@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf4fb;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .kalkulator {
+            background-color: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(13, 16, 102, 0.2);
+        }
+
+        h2 {
+            color: #176b87;
+        }
+
+        label {
+            color: #263238;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            border: 2px solid #90caf9;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        button {
+            width: 45px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2196b0;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        #output {
+            background-color: #e1f5fe;
+            font-weight: bold;
+            color: #263238;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="kalkulator">
+
+        <h2>Kalkulator Sederhana</h2>
+
+        <label>Input Bilangan 1</label>
+        <br>
+        <input type="number" id="bilangan1">
+
+        <br><br>
+
+        <label>Input Bilangan 2</label>
+        <br>
+        <input type="number" id="bilangan2">
+
+        <br><br>
+
+        <button onclick="tambah()">+</button>
+        <button onclick="kurang()">-</button>
+        <button onclick="kali()">x</button>
+        <button onclick="bagi()">/</button>
+
+        <br><br>
+
+        <label>Output</label>
+        <br>
+        <input type="text" id="output" readonly>
+
+    </div>
+
+
+    <script>
+
+        function tambah() {
+            let bilangan1 = Number(document.getElementById("bilangan1").value);
+            let bilangan2 = Number(document.getElementById("bilangan2").value);
+
+            let hasil = bilangan1 + bilangan2;
+
+            document.getElementById("output").value = hasil;
+        }
+
+        function kurang() {
+            let bilangan1 = Number(document.getElementById("bilangan1").value);
+            let bilangan2 = Number(document.getElementById("bilangan2").value);
+
+            let hasil = bilangan1 - bilangan2;
+
+            document.getElementById("output").value = hasil;
+        }
+
+        function kali() {
+            let bilangan1 = Number(document.getElementById("bilangan1").value);
+            let bilangan2 = Number(document.getElementById("bilangan2").value);
+
+            let hasil = bilangan1 * bilangan2;
+
+            document.getElementById("output").value = hasil;
+        }
+
+        function bagi() {
+            let bilangan1 = Number(document.getElementById("bilangan1").value);
+            let bilangan2 = Number(document.getElementById("bilangan2").value);
+
+            let hasil = bilangan1 / bilangan2;
+
+            document.getElementById("output").value = hasil;
+        }
+
+    </script>
+
+</body>
+</html>
